@@ -1,0 +1,464 @@
+﻿*{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100%;
+    margin: 0;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    min-height: 100svh;
+    justify-content: center;
+    align-items: center;
+    background:url(../assets/DesktopBackground.png) no-repeat center center fixed;
+    background-size: cover;
+    padding: 1.25rem;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+label{
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.container{
+    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login, Register, Agreement */
+.outer{
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    margin-left: 47%;
+    width: min(360px, 95%);
+    max-width: 600px;
+    height: auto;
+    padding: 10px;
+    margin-top: 90px;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.forms{
+    display: flex;
+    position: relative;
+    transition: transform 0.35s ease-in-out;
+    width: 200%;
+    max-width: 720px;
+    height: auto;
+}
+
+.forms.show-signup {
+    transform: translateX(-50%);
+}
+
+.sign-in,
+.sign-up {
+    flex: 0 0 50%;
+    width: 50%;
+    box-sizing: border-box;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.forms:not(.show-signup) .sign-up,
+.forms.show-signup .sign-in {
+    visibility: hidden;
+}
+
+/* LOGO SECTION */
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    
+}
+
+h4{
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 10px;
+    color: silver;
+}
+
+/* Form */
+form{
+    width: 100%;
+    padding: 0 20px;
+ }
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.stage-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    margin-top: 10px;
+    width: 100%;
+}
+.agreement-section {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.agreement-text {
+    max-height: 130px;
+    overflow-y: auto;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.agreement-text h4 {
+    margin-bottom: 6px;
+    color: whitesmoke;
+}
+
+.agreement-text p {
+    margin-bottom: 14px;
+    color: #2b2b2b;
+    line-height: 1.5;
+}
+
+.agreement-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.agreement-checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+.inputs{
+    width: 100%;
+    height: 30px;
+    padding-left: 13px;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    border-radius: 7px;
+    position: relative;
+    box-shadow: 0px 0px 12px skyblue;
+    color: black;
+}
+
+.inputs:hover,
+.inputs:focus{
+    background-color: whitesmoke;
+}
+
+/* Remember & Forgot Password */
+.rem-for-pass{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.remember-me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+#remember{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border:none;
+    cursor: pointer;
+}
+
+#rem-lable{
+    color: whitesmoke;
+    font-size: 12px;
+}
+
+.forgot-password{
+    font-size: 12px;
+    color: whitesmoke;
+    white-space: nowrap;
+}
+
+/* Links */
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: whitesmoke;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+a:hover::after{
+    transform: scaleX(1);
+}
+
+/* Button */
+button{
+    width: 100%;
+    height: 30px;
+    padding: 0 12px;
+    background-color: rgb(9, 151, 207);
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.prev-btn{
+    background-color: rgb(9, 151, 207);
+    width: 45%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+#stage1 .next-btn {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.next-btn{
+    background-color: rgb(9, 151, 207);
+    width: 45%;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.signIn,
+.signUp {
+    flex: 1;
+    width: auto;
+    padding-left: 0;
+    background-color: transparent;
+    color: whitesmoke;
+    box-shadow: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.signIn.active,
+.signUp.active {
+    background-color: rgb(9, 151, 207);
+    color: black;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Register Section */
+.btn{
+    height: 34px;
+    width: min(220px, 100%);
+    margin: 30px auto;
+    box-shadow: 0px 0px 20px #F3CFBB;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.signIn, .signUp {
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.forms{
+    height: auto;
+    width: 200%;
+}
+
+.register{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1024px){
+    body{
+        background:url(../assets/TabletBackground.png) no-repeat center center fixed;
+        background-size: cover;
+        overflow-y: hidden;
+    }
+
+    .outer{
+        margin-left: 0;
+        width: min(460px, 80vw);
+        max-width: 460px;
+        height: auto;
+        padding: 10px;
+        margin-top: 0;
+    }
+
+    .forms .sign-in{
+        margin-left: 20%;
+    }
+
+    #rem-lable{
+        font-size: 13px;
+        color: whitesmoke;
+    }
+
+    a{
+        font-size: 13px;
+        color: whitesmoke;
+    }
+}
+
+/* Phone browser "Desktop site" usually uses a wide portrait viewport. */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+    .outer{
+        width: min(86vw, 760px);
+        max-width: 760px;
+        padding: 18px;
+    }
+
+    .btn{
+        width: 240px;
+        height: 38px;
+        margin: 18px auto 28px;
+    }
+
+    h1{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    h4{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    label,
+    .signIn,
+    .signUp,
+    button,
+    .inputs{
+        font-size: 16px;
+    }
+
+    .inputs,
+    button{
+        height: 40px;
+    }
+
+    .rem-for-pass{
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #rem-lable,
+    a{
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px){
+    body{
+        background:url(../assets/MobileBackground.png) no-repeat center center fixed;
+        background-size: cover;
+        align-items: flex-start;
+        height: 100vh;
+        height: 100svh;
+        padding: 24px 14px;
+        overflow-y: hidden;
+    }
+
+    .container{
+        align-items: flex-start;
+        min-height: 100vh;
+        min-height: 100svh;
+        padding-top: 45%;
+    }
+
+    .outer{
+        margin-left: 0;
+        width: min(100%, 390px);
+        max-width: 390px;
+        height: auto;
+        padding: 14px;
+        margin-top: 0;
+    }
+
+    h1{
+        font-size: 1.35rem;
+        text-align: center;
+    }
+
+    h4{
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .forms{
+        padding: 0 10px;
+    }
+
+    .rem-for-pass{
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .forms{
+        gap: 12px;
+    }
+
+    #rem-lable{
+        font-size: 11px;
+        color: whitesmoke;
+        white-space: nowrap;
+    }
+
+    a{
+        font-size: 11px;
+        color: whitesmoke;
+    }
+}

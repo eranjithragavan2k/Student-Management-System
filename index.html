@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; frame-ancestors 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <link rel="stylesheet" href="LoginSystemStyle.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="outer">
+            <div class="btn">
+                <button class="signIn">Sign In</button>
+                <button class="signUp">Sign Up</button>
+            </div>
+            <div class="forms">
+                <div class="sign-in">
+                    <div class="head">
+                        <h1>Welcome Back</h1>
+                        <h4>Sign in to continue to your journey</h4>
+                    </div>
+                    <form id="loginForm">
+                        <label for="login-staff-id">Staff ID</label><br><br>
+                        <input type="text" id="login-staff-id" class="inputs" name="staff-id" placeholder="Enter Your Staff ID" required><br><br>
+                        <label for="login-password">Password</label><br><br>
+                        <input type="password" id="login-password" class="inputs" name="password" placeholder="Enter Your Password" required><br><br>
+                        <div class="rem-for-pass">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember" id="rem-lable">Remember Me</label>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="ForgotPassword.html">Forgot Password?</a>
+                            </div>
+                        </div><br>
+                        <button type="submit">Sign In</button><br><br>
+                    </form>
+                </div>
+
+                <div class="sign-up">
+                    <div class="head">
+                        <h1>Create Account</h1>
+                        <h4>Join us to start your journey</h4>
+                    </div>
+                    <form id="registerForm">
+                        <div class="form-step active" id="stage1">
+                            <label for="register-staff-name">Teaching Staff Name</label><br><br>
+                            <input type="text" id="register-staff-name" class="inputs" name="staff-name" placeholder="Enter Teaching Staff Name" required><br><br>
+                            <label for="register-staff-id">Teaching Staff ID</label><br><br>
+                            <input type="text" id="register-staff-id" class="inputs" name="staff-id" placeholder="Enter Teaching Staff ID" required><br><br>
+                            <label for="register-staff-email">Teaching Staff Email</label><br><br>
+                            <input type="email" id="register-staff-email" class="inputs" name="staff-email" placeholder="Enter Teaching Staff Email" required><br><br>
+                            <div class="stage-controls">
+                                <button class="next-btn" type="button">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="form-step" id="stage2">
+                            <label for="register-password">Password</label><br><br>
+                            <input type="password" id="register-password" class="inputs" name="password" placeholder="Enter a Password" required><br><br>
+                            <label for="confirm-password">Confirm Password</label><br><br>
+                            <input type="password" id="confirm-password" class="inputs" name="confirm-password" placeholder="Confirm Password" required><br><br>
+                            <div class="stage-controls">
+                                <button class="prev-btn" type="button">Previous</button>
+                                <button class="next-btn" type="button">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="form-step" id="stage3">
+                            <div class="agreement-section">
+                                <h3>User Register Agreement</h3>
+                                <div class="agreement-text">
+                                    <h4>1. Acceptance of Terms</h4>
+                                    <p>By registering on this website, you agree to comply with all applicable terms, conditions, and policies. Your registration confirms that the information you provide is accurate, complete, and truthful. You understand that providing false or misleading information may result in suspension or permanent termination of your account without prior notice.</p>
+                                    <h4>2. User Responsibilities</h4>
+                                    <p>You are responsible for maintaining the confidentiality of your account credentials, including your username and password. You agree not to share your account with others or allow unauthorized access. Any activities performed through your account will be considered your responsibility unless otherwise required by applicable law.</p>
+                                    <h4>3. Privacy and Data Collection</h4>
+                                    <p>We collect, store, and process your personal information solely for providing and improving our services. Your information will be handled according to our Privacy Policy. We implement reasonable security measures to protect your data, but no online system can guarantee complete protection against all security threats.</p>
+                                    <h4>4. Limitation of Liability</h4>
+                                    <p>To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of our services.</p>
+                                </div>
+                                <div class="agreement-checkbox">
+                                    <input type="radio" style="margin-top: 10px;" id="agree" name="agreement" value="agree">
+                                    <label for="agree" id="rem-lable" style="margin-top: 10px;"><span>I agree to the Terms and Conditions</span></label>
+                                </div>
+                            </div>
+                            <div class="stage-controls">
+                                <button class="prev-btn" type="button">Previous</button>
+                                <button class="next-btn" type="submit">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
